@@ -5,7 +5,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { UploadButton } from "@uploadthing/react";
 import {
   uniqueNamesGenerator,
-  Config,
   adjectives,
   colors,
   animals,
@@ -41,10 +40,8 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
       if (response.status === 200) {
         const data = await response.json();
         setPost(data);
-        // console.log(data);
       } else {
         toast.error("Post not found");
-        console.log("Post not found");
       }
     };
 
