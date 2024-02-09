@@ -147,7 +147,7 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
         )}
       </div>
       <div>
-        <h1 className="text-2xl font-black">Messages</h1>
+        <h1 className="text-2xl font-black my-5 mb-10">Messages</h1>
         {messages.map((message: any, index: number) => {
           return (
             <div key={index} className="flex flex-col gap-3 mt-6">
@@ -155,9 +155,9 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
                 <Image
                   src={message.profile}
                   alt="Profile"
-                  width={50}
-                  height={50}
-                  className="rounded-full"
+                  width={60}
+                  height={60}
+                  className="rounded-sm"
                 />
                 <h1 className="text-lg font-bold">{message.name}</h1>
               </div>
@@ -166,8 +166,8 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
                 <Image
                   src={message.image}
                   alt="Image"
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={100}
                 />
               )}
             </div>
