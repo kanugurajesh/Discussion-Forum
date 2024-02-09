@@ -28,11 +28,11 @@ export default function Home() {
       <div className="flex flex-col gap-5">
         <h2 className="flex justify-center font-bold text-lg">Posts</h2>
         <div className="max-h-[65vh] overflow-y-scroll">
-          <table className="w-full">
-            <thead>
+          <table className="w-full border-2 border-black">
+            <thead className="border-2 border-black">
               <tr>
                 <th className="border border-black w-3 p-2">S.No</th>
-                <th className="border border-black p-2">Title</th>
+                <th className="border border-black p-2">Post</th>
               </tr>
             </thead>
             <tbody>
