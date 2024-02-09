@@ -13,40 +13,42 @@ export default function CreatePost() {
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
-  }
+  };
 
   const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setContent(e.target.value);
-  }
+  };
 
   const handleSubmit = () => {
     if (!title) {
       toast.error("Title is required");
+      return;
     }
     if (!content) {
       toast.error("Content is required");
+      return;
     }
-  }
+  };
 
   return (
     <main className="p-4 flex flex-col gap-5">
       <Toaster />
       <div className="flex flex-col justify-center items-center gap-2">
-        <h1 className="text-2xl font-black">Discussion</h1>
-        <p>Discuss with the community</p>
+        <h1 className="text-2xl font-black">Post</h1>
+        <p>Add post in the forum</p>
       </div>
       <div className="flex justify-between items-center">
         <Link
-          href="/setprofile"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black hover:border-black border-[2px] transition duration-300 ease-in-out"
-        >
-          Set Profile
-        </Link>
-        <Link
           href="/"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black hover:border-black border-[2px] transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out outline-none"
         >
           Go Back
+        </Link>
+        <Link
+          href="/setprofile"
+          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+        >
+          Set Profile
         </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-3 mt-6">
@@ -75,7 +77,10 @@ export default function CreatePost() {
             toast.error(`ERROR! ${error.message}`);
           }}
         />
-        <button className="bg-black text-white p-2 font-bold rounded-md w-[150px] outline-none border-2 border-black hover:bg-white hover:text-black transition-all ease-in-out duration-300" onClick={handleSubmit}>
+        <button
+          className="bg-black text-white p-2 font-bold rounded-md w-[150px] outline-none border-2 border-black hover:bg-white hover:text-black transition-all ease-in-out duration-300"
+          onClick={handleSubmit}
+        >
           Submit
         </button>
       </div>
