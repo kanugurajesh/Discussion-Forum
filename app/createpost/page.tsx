@@ -37,16 +37,16 @@ export default function CreatePost() {
       </div>
       <div className="flex justify-between items-center">
         <Link
-          href="/profile"
+          href="/setprofile"
           className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black hover:border-black border-[2px] transition duration-300 ease-in-out"
         >
           Set Profile
         </Link>
         <Link
-          href="/createpost"
+          href="/"
           className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black hover:border-black border-[2px] transition duration-300 ease-in-out"
         >
-          Create Post
+          Go Back
         </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-3 mt-6">
