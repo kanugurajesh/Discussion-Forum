@@ -19,7 +19,7 @@ export default function CreatePost() {
     setContent(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!title) {
       toast.error("Title is required");
       return;
@@ -27,6 +27,29 @@ export default function CreatePost() {
     if (!content) {
       toast.error("Content is required");
       return;
+    }
+
+    const data = {
+      title,
+      content,
+      image,
+    };
+
+    const response = await fetch("/api/createpost", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.status === 201) {
+      toast.success("Post created successfully");
+      setTitle("");
+      setContent("");
+      setImage("");
+    } else {
+      toast.error("Error creating post");
     }
   };
 
@@ -55,12 +78,14 @@ export default function CreatePost() {
         {image && <Image src={image} alt="Image" width={200} height={200} />}
         <input
           type="text"
+          value={title}
           placeholder="Enter the title"
           className="border-2 border-black p-2 w-[250px]"
           onChange={handleTitleChange}
         />
         <textarea
           placeholder="Enter the content"
+          value={content}
           cols={24}
           rows={8}
           className="border-2 border-black p-2"
