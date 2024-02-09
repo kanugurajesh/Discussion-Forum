@@ -54,7 +54,15 @@ export default function CreatePost() {
       </div>
       <div className="flex flex-col justify-center items-center gap-3 mt-10">
         {title && <h1 className="text-xl font-bold">{title}</h1>}
-        {image && <Image src={image} alt="Image" width={200} height={200} className="mb-5" />}
+        {image && (
+          <Image
+            src={image}
+            alt="Image"
+            width={200}
+            height={200}
+            className="mb-5"
+          />
+        )}
         {/* @ts-ignore */}
         <UploadButton
           endpoint="imageUploader"

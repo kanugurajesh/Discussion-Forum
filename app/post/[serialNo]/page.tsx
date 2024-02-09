@@ -34,7 +34,7 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
 
   useEffect(() => {
     const getPost = async () => {
-      const response = await fetch("/api/getpost", {
+      const response = await fetch("/api/getposts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,6 +71,10 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
     }
   }, []);
 
+  const handleMessage = () => {
+
+  }
+
   return (
     <main className="p-4 flex flex-col gap-5">
       <Toaster />
@@ -102,11 +106,11 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
       </div>
       <div>
         {addMessage && (
-          <div className="flex flex-col justify-center items-center gap-3 mt-6">
+          <div className="flex justify-center items-center gap-3 mt-6">
             <input
               type="text"
               placeholder="Enter your message"
-              className="p-2 border-2 border-black rounded-md outline-none"
+              className="p-2 border-2 border-black rounded-md outline-none mb-6"
             />
             {/* @ts-ignore */}
             <UploadButton
@@ -119,7 +123,7 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
                 toast.error(`ERROR! ${error.message}`);
               }}
             />
-            <button className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out">
+            <button className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out mb-6">
               Add
             </button>
           </div>
