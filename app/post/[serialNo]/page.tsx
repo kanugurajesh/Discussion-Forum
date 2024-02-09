@@ -126,13 +126,13 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out outline-none"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out outline-none"
         >
           Go Back
         </Link>
         <button
           onClick={() => setAddMessage(!addMessage)}
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Add Message
         </button>

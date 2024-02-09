@@ -41,13 +41,13 @@ export default function CreatePost() {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Go Back
         </Link>
         <Link
           href="/createpost"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Create Post
         </Link>
