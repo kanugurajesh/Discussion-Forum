@@ -27,7 +27,6 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="flex justify-center font-bold text-lg">Posts</h2>
-        {/* create a table with serial number and post title */}
         <div className="max-h-[65vh] overflow-y-scroll">
           <table className="w-full">
             <thead>
@@ -38,58 +37,9 @@ export default function Home() {
             </thead>
             <tbody>
               <tr>
-                <td className="border border-black w-3 p-2">1</td>
+                <td className="border border-black p-2">1</td>
                 <td className="border border-black p-2">Post 1</td>
               </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-              <tr>
-                <td className="border border-black w-3 p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
-
-              {/* <tr>
-              <td className="border border-black w-3">2</td>
-              <td className="border border-black">Post 2</td>
-            </tr> */}
             </tbody>
           </table>
         </div>
