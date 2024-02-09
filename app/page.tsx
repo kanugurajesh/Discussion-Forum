@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <div className="flex justify-between items-center">
         <Link
-          href="/profile"
+          href="/setprofile"
           className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Set Profile
