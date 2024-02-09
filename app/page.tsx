@@ -32,19 +32,18 @@ export default function Home() {
       <div className="flex justify-between items-center">
         <Link
           href="/setprofile"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Set Profile
         </Link>
         <Link
           href="/createpost"
-          className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
+          className="bg-black text-white font-medium text-lg p-1 rounded-md px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
           Create Post
         </Link>
       </div>
-      <div className="flex flex-col gap-5">
-        <h2 className="flex justify-center font-bold text-lg">Posts</h2>
+      <div className="flex flex-col gap-5 mt-8">
         <div className="max-h-[65vh] overflow-y-scroll">
           <table className="w-full border-2 border-black">
             <thead className="border-2 border-black">

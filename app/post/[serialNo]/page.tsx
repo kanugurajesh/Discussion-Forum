@@ -150,7 +150,7 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
         <h1 className="text-2xl font-black my-5 mb-10">Messages</h1>
         {messages.map((message: any, index: number) => {
           return (
-            <div key={index} className="flex flex-col gap-3 mt-6">
+            <div key={index} className="flex flex-col gap-3 mt-6 bg p-2 bg-black text-white">
               <div className="flex items-center gap-3">
                 <Image
                   src={message.profile}
@@ -161,7 +161,7 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
                 />
                 <h1 className="text-lg font-bold">{message.name}</h1>
               </div>
-              <p>{message.content}</p>
+              <p className="font-medium">{message.content}</p>
               {message.image && (
                 <Image
                   src={message.image}
