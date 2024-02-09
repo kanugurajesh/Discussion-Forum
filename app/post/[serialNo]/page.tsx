@@ -2,11 +2,35 @@
 
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { UploadButton } from "@uploadthing/react";
+import {
+  uniqueNamesGenerator,
+  Config,
+  adjectives,
+  colors,
+  animals,
+} from "unique-names-generator";
+
+// const customConfig: Config = {
+//   dictionaries: [adjectives, colors],
+//   separator: '-',
+//   length: 2,
+// };
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Posts({ params }: { params: { serialNo: number } }) {
+
+  const randomName: string = uniqueNamesGenerator({
+    dictionaries: [adjectives, colors, animals],
+  });
+
   const [post, setPost] = useState({});
+  const [addMessage, setAddMessage] = useState(false);
+  const [name, setName] = useState("");
+  const [profile, setProfile] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     const getPost = async () => {
@@ -31,6 +55,22 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
     getPost();
   }, [params.serialNo]);
 
+  useEffect(() => {
+    setName(localStorage.getItem("name") || "");
+    setProfile(localStorage.getItem("image") || "");
+
+    if (!name) {
+      setName(randomName);
+      localStorage.setItem("name", randomName);
+    }
+
+    if (!profile) {
+      const randomProfile: string = `https://source.unsplash.com/random?blue`;
+      setProfile(randomProfile);
+      localStorage.setItem("image", randomProfile);
+    }
+  }, []);
+
   return (
     <main className="p-4 flex flex-col gap-5">
       <Toaster />
@@ -45,12 +85,12 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
         >
           Go Back
         </Link>
-        <Link
-          href="/setprofile"
+        <button
+          onClick={() => setAddMessage(!addMessage)}
           className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out"
         >
-          Set Profile
-        </Link>
+          Add Message
+        </button>
       </div>
       <div className="flex flex-col justify-center items-center gap-3 mt-6">
         {/* @ts-ignore */}
@@ -59,6 +99,31 @@ export default function Posts({ params }: { params: { serialNo: number } }) {
         {post.content && <p>{post.content}</p>}
         {/* @ts-ignore */}
         {post.image && (<Image src={post.image} alt="Image" width={200} height={200} />)}
+      </div>
+      <div>
+        {addMessage && (
+          <div className="flex flex-col justify-center items-center gap-3 mt-6">
+            <input
+              type="text"
+              placeholder="Enter your message"
+              className="p-2 border-2 border-black rounded-md outline-none"
+            />
+            {/* @ts-ignore */}
+            <UploadButton
+              endpoint="imageUploader"
+              onClientUploadComplete={(res: any) => {
+                setImage(res[0].url);
+                toast.success("Image uploaded successfully");
+              }}
+              onUploadError={(error: Error) => {
+                toast.error(`ERROR! ${error.message}`);
+              }}
+            />
+            <button className="bg-black text-white font-medium text-lg p-1 rounded-sm px-2 hover:bg-white hover:text-black border-black border-2 transition duration-300 ease-in-out">
+              Add
+            </button>
+          </div>
+        )}
       </div>
     </main>
   );

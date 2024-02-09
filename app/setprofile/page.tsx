@@ -15,7 +15,7 @@ export default function CreatePost() {
   };
 
   useEffect(() => {
-    setTitle(localStorage.getItem("title") || "");
+    setTitle(localStorage.getItem("name") || "");
     setImage(localStorage.getItem("image") || "");
   }, []);
 
@@ -53,8 +53,8 @@ export default function CreatePost() {
         </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-3 mt-10">
-        {image && <Image src={image} alt="Image" width={200} height={200} />}
         {title && <h1 className="text-xl font-bold">{title}</h1>}
+        {image && <Image src={image} alt="Image" width={200} height={200} className="mb-5" />}
         {/* @ts-ignore */}
         <UploadButton
           endpoint="imageUploader"
