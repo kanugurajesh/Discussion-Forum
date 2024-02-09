@@ -56,9 +56,16 @@ export default function Home() {
             <tbody>
               {posts.map((post, index) => (
                 <tr key={index}>
-                  <td className="border border-black w-3 p-2">{index + 1}</td>
-                  {/* @ts-ignore */}
-                  <td className="border border-black p-2">{post.title}</td>
+                  <td className="border border-black w-3 p-2 font-bold">
+                    {index + 1}
+                  </td>
+                  <td className="border border-black p-2 cursor-pointer font-bold text-blue-400 hover:underline">
+                    {/* @ts-ignore */}
+                    <Link href={`/post/${post.serialNo}`}>
+                      {/* @ts-ignore */}
+                      {post.title}
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
