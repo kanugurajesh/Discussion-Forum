@@ -1,9 +1,27 @@
 "use client";
 
 import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const response = await fetch("/api/getposts");
+
+      if (response.status === 200) {
+        const data = await response.json();
+        setPosts(data);
+      } else {
+        toast.error("Posts not found");
+      }
+    };
+
+    getPosts();
+  }, []);
+
   return (
     <main className="p-4 flex flex-col gap-5">
       <Toaster />
@@ -36,10 +54,13 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border border-black p-2">1</td>
-                <td className="border border-black p-2">Post 1</td>
-              </tr>
+              {posts.map((post, index) => (
+                <tr key={index}>
+                  <td className="border border-black w-3 p-2">{index + 1}</td>
+                  {/* @ts-ignore */}
+                  <td className="border border-black p-2">{post.title}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
