@@ -17,10 +17,12 @@ const postSchema = new mongoose.Schema({
   image: {
     type: String,
   },
-  messages: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "users",
-  },
+  messages: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
+    },
+  ],
 });
 
 // get the users model if it not there create a users model and return a reference to it
