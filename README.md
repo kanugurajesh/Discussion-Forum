@@ -45,17 +45,12 @@ If you encounter any issues or have feedback, please open an issue on our [GitHu
 - Next.js
 - Tailwindcss
 - Gemini Pro
-- Rive
 - Typescript
-- API
-- Replicate
-- Markdown
 - Vercel
-- Stable Diffusion
-- Resend
 - Face Swap LLM
 - UploadThing
 - React
+- MongoDB
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://rajeshportfolio.me/)
