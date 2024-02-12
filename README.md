@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### 🌟 star the project if you like it
 
-## Getting Started
+<div align=center>
+  <img src="https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/1d71f50e-b5eb-49f4-9727-852a6981f1b3" alt="image" width=150 height=150 />
+</div>
 
-First, run the development server:
+## Problem Statement
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+In today's interconnected world, individuals often face challenges that they wish to discuss openly but hesitate due to concerns about privacy and sensitivity. Many seek a platform where they can seek advice and solutions anonymously, without fear of judgment or exposure.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Solution Statement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To address this need, I've developed an anonymous discussion forum using cutting-edge technologies like Next.js and MongoDB. Unlike traditional forums that require user registration and personal information, my platform prioritizes privacy and anonymity. Users can freely share their problems and seek support without disclosing their identity. The platform automatically anonymizes user profiles, ensuring that no personal details are stored or tracked. By eliminating cookies and other tracking tools, users can engage in candid discussions with complete peace of mind.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots
 
-## Learn More
+![Screenshot 2024-02-12 230702](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/614b8b83-a9ed-4bf6-a5c8-51969bd528f3)
 
-To learn more about Next.js, take a look at the following resources:
+![Screenshot 2024-02-12 230741](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/037519b0-64e0-42bd-a7d2-856d1d1f3047)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Screenshot 2024-02-12 230801](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/09227248-4de9-400d-830a-aebbdaf8e28f)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Screenshot 2024-02-12 230815](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/602a57e0-9384-45af-b315-5830d3733b54)
 
-## Deploy on Vercel
+![Screenshot 2024-02-12 230821](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/92051f0d-3649-4481-a4f4-2163c1a4e90d)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Screenshot 2024-02-12 231910](https://github.com/kanugurajesh/Discussion-Forum/assets/77529419/05e0b013-dea0-405c-b063-8fe172d77d43)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
